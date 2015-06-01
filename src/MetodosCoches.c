@@ -31,6 +31,24 @@ do
     return -1;
 }
 
+int insertar(struct Coche coche, struct Coche taller[]){
+
+    if (buscar(taller, coche.matricula) != -1) return 1;
+    	else {
+    		int i;
+    			for (i = 0; i < 10; i++)
+    			{
+    if (strcasecmp(taller[i].matricula, "0") == 0)
+       {
+                taller[i]=coche;
+                return 0;
+            }
+        }
+    }
+}
+
+//INSERTAR
+
 void ordenar(struct Coche taller[]){
 
     struct Coche aux;
