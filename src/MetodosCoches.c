@@ -33,6 +33,22 @@
 			}
 			while(++i<size(taller));
 		}
+		
+		
+		void ordenar (struct Coche taller[]) {
+		struct Coche aux;
+		int i = 0;
+		int j = 0;
+		for (; i<size(taller) - 1; i++) {
+			for (;j<size(taller); ++j){
+				if (taller[i].matricula, taller [j].matricula == 1){
+					aux = taller[i];
+					taller[i] = taller [j];
+					taller[j] = aux;
+				}
+			}
+		}
+	}
 
 
 
