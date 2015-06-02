@@ -47,7 +47,40 @@ int insertar(struct Coche coche, struct Coche taller[]){
     }
 }
 
-//INSERTAR
+
+int borrar(struct Coche taller[], char matricula[]){
+
+    int i=buscar(taller, matricula);
+
+    if (i != -1)
+    {
+        strcpy(taller[i].matricula, "0");
+        strcpy(taller[i].marca, "0");
+        strcpy(taller[i].modelo, "0");
+        taller[i].cv = 0;
+        return 0;
+            }
+            else return 1;
+        }
+
+void imprimir(struct Coche taller[], char matricula[]){
+
+    int i=buscar(taller, matricula);
+
+    if (i==-1) printf("1\n\n");
+    else
+    {
+        printf("La matricula es: ");
+        printf("%s\n", taller[i].matricula);
+        printf("La marca del coche es: ");
+        printf("%s\n", taller[i].marca);
+        printf("El modelo del coche es: ");
+        printf("%s\n", taller[i].modelo);
+        printf("Los caballos del coche son: ");
+        printf("%d\n\n", taller[i].cv);
+    }
+}
+
 
 void ordenar(struct Coche taller[]){
 
